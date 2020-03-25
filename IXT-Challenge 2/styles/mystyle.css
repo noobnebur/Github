@@ -69,6 +69,7 @@ body{
   	justify-content: center;
 	z-index:2;
 	background-color: white;
+	
 }
 #center {
 	border-radius:50%;
@@ -120,14 +121,12 @@ body{
 	    transform: rotateZ(360deg);
 	  }
 	}
-
-
 #clockText {
 	font-weight:bold;
 	text-transform:uppercase;
-	font-size: 1.5em;
+	font-size: 5em;
 	align-self: center;
-	margin-top:100px;
+	margin-top:200px;
 }
 
 #sun {
@@ -162,9 +161,23 @@ body{
 	transition-duration:0.3s;
 	transform:scale(1.2);
 }*/
-#clock:hover {
-	transition-duration:0.3s;
-	transform:scale(1.2);
-	
+@media only screen and (min-width: 300px) {
+  #clock {
+    transform:scale(2);
+  }
+}
+@media only screen and (min-width: 900px) {
+  #clock {
+    transform:scale(3);
+    margin-top:300px;
+  }
+  #clockText {
+  	margin-top:300px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #clock {
+    transform:scale(3);
+  }
 }
 
