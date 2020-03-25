@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<title>gerrit</title>
+		<link type="text/css" href="stylesheet.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Bread',     11],
+          ['Milk',      2],
+          ['Soilent',  2],
+          ['Lima beans', 2],
+          ['Trash',    7]
+        ]);
+
+        var options = {
+            title: 'Onboard food supplies',
+            backgroundColor: '#000000',
+            legendTextStyle: { color: '#FFF' },
+            titleTextStyle: { color: '#FFF' },
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       <script type="text/javascript">
+              google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Celcius', -270],
+          ['Speed', 3600],
+            ['G-force', 25],
+        ]);
+
+        var options = {
+          width: 400, height: 120,
+          redFrom: 90, redTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 5,
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+
+        setInterval(function() {
+          data.setValue(0, 1, 40 + Math.round(-60 * Math.random()));
+          chart.draw(data, options);
+        }, 13000);
+        setInterval(function() {
+          data.setValue(1, 1, 40 + Math.round(6000 * Math.random()));
+          chart.draw(data, options);
+        }, 5000);
+          setInterval(function() {
+          data.setValue(1, 1, 40 + Math.round(50 * Math.random()));
+          chart.draw(data, options);
+        }, 5000);
+      }
+        </script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Popularity'],
+          ['Germany', 200],
+          ['United States', 300],
+          ['Brazil', 400],
+          ['Canada', 500],
+          ['France', 600],
+          ['RU', 700]
+        ]);
+
+        var options = {
+            
+            colorAxis: {colors: ['#00853f', 'black', '#e31b23']},
+            backgroundColor: '#000000',
+            datalessRegionColor: '#FFFFFF',
+            defaultColor: '#f5f5f5',
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+   
+	</head>
+	<body>
+		<section id="imagecontainer">
+            <img src="Spacetravel.png" alt="Huidige positie ruimteschip" id="reisafbeelding">
+        </section>
+        <section id="graphcontainer">
+            <div id="chart_div" ></div>
+            <div id="regions_div"></div>
+            <div id="donutchart"></div>
+        </section>
+        <footer id="foodcontainer">
+        </footer>
+	</body>
+</html>

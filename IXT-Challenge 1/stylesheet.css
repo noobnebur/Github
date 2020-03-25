@@ -1,0 +1,127 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+#reisafbeelding {
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    width:auto;
+    height:auto;
+}
+
+#imagecontainer {
+    /*background: rgb(0,97,76);
+    //background: linear-gradient(180deg, rgba(0,97,76,1) 0%, rgba(0,0,0,1) 64%, rgba(0,0,0,1) 100%);*/
+    background: rgb(0,255,200);
+    background: linear-gradient(157deg, rgba(0,255,200,1) 0%, rgba(0,140,117,1) 0%, rgba(0,69,101,1) 45%, rgba(0,0,0,1) 100%);
+    display:flex;   
+}
+#graphcontainer {
+    max-width:100%;
+    display:flex;
+    flex-direction: column;
+    background-color:black;
+}
+#regions_div {
+    max-width:95%;
+}
+
+#chart_div {
+    max-width:100%;
+    margin-right:auto;
+    margin-left:auto;
+    background:black;
+}
+
+#donutchart {
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+
+#foodcontainer {
+    height:100px;
+    background-color: white;
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-width : 768px) {
+    body {
+        flex-direction:row;
+    }
+    #imagecontainer {
+        max-width:100%;
+    }
+    #graphcontainer {
+        max-width:100%;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+//css reset below 
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
